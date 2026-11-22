@@ -55,6 +55,9 @@ A personal daily task management, calendar scheduling, and daily reflection web 
     5. *What are my priorities for tomorrow?*
   - Historical review inspection by date with date-keyed `localStorage` persistence (`dailyPlanner.reviews.v1`).
   - Side-by-side reference list of tasks scheduled for the review date.
+  - **Dynamic Daily Reflection Rule**:
+    - 40 unique principles and quotes across 8 categories (Discipline, Time Management, Learning, Focus, Self-Awareness, Goal Setting, Problem-Solving, Persistence).
+    - Deterministic date-based selection ensuring historical consistency without external APIs.
 
 ## Getting Started
 

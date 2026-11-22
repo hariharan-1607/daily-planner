@@ -484,7 +484,7 @@
   color: var(--color-text-muted);
 }
 
-/* Mindset Card */
+/* Mindset & Dynamic Reflection Rule Card */
 .mindset-tip-card {
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
@@ -493,7 +493,52 @@
   box-shadow: var(--shadow-xs);
   display: flex;
   flex-direction: column;
+  gap: 0.65rem;
+}
+
+.tip-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tip-header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.tip-icon {
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.tip-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.tip-category-pill {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  background-color: var(--color-primary-light, #f3e8ff);
+  border: 1px solid var(--color-primary-border, #e9d5ff);
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-full);
+}
+
+.tip-body {
+  font-size: 0.865rem;
+  color: var(--color-text-main);
+  line-height: 1.55;
+  font-style: italic;
+  margin: 0;
 }
 
 .tip-author {

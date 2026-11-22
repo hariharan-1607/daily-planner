@@ -21,6 +21,7 @@ import {
   isToday
 } from '../utils/dateUtils'
 import * as dailyReviewStorage from '../services/dailyReviewStorage'
+import { getDailyReflectionRule } from '../utils/reflectionRules'
 import './DailyReviewPage.css'
 
 export default function DailyReviewPage() {
@@ -29,6 +30,9 @@ export default function DailyReviewPage() {
 
   // Selected date for review
   const [selectedDate, setSelectedDate] = useState(todayStr)
+
+  // Dynamic daily reflection rule for selected date
+  const dailyRule = useMemo(() => getDailyReflectionRule(selectedDate), [selectedDate])
 
   // Reflection form state
   const [wentWell, setWentWell] = useState('')
@@ -389,16 +393,19 @@ export default function DailyReviewPage() {
             </div>
           </div>
 
-          {/* Philosophy / Mindset Card */}
+          {/* Dynamic Daily Reflection Rule Card */}
           <div className="mindset-tip-card">
             <div className="tip-header">
-              <Sparkles size={16} className="tip-icon" />
-              <span className="tip-tag">Reflection Rule</span>
+              <div className="tip-header-left">
+                <Sparkles size={16} className="tip-icon" />
+                <span className="tip-tag">Reflection Rule</span>
+              </div>
+              <span className="tip-category-pill">{dailyRule.category}</span>
             </div>
             <p className="tip-body">
-              "We do not learn from experience... we learn from reflecting on experience."
+              &ldquo;{dailyRule.rule}&rdquo;
             </p>
-            <span className="tip-author">&mdash; John Dewey</span>
+            <span className="tip-author">&mdash; {dailyRule.author}</span>
           </div>
         </aside>
       </div>
