@@ -1,10 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import {
   CheckSquare,
-  Calendar,
-  AlertCircle,
   History,
-  ClipboardCheck,
   FileSpreadsheet,
   BarChart3,
   Settings
@@ -13,6 +10,8 @@ import { TaskProvider } from './context/TaskContext'
 import MainLayout from './layouts/MainLayout'
 import DashboardPage from './pages/DashboardPage'
 import OverdueTasksPage from './pages/OverdueTasksPage'
+import CalendarPage from './pages/CalendarPage'
+import DailyReviewPage from './pages/DailyReviewPage'
 import PlaceholderPage from './pages/PlaceholderPage'
 
 export default function App() {
@@ -24,8 +23,14 @@ export default function App() {
             {/* Main Dashboard */}
             <Route index element={<DashboardPage />} />
 
-            {/* Overdue Tasks Page (Active Phase 4) */}
+            {/* Overdue Tasks Page (Phase 4) */}
             <Route path="overdue" element={<OverdueTasksPage />} />
+
+            {/* Calendar Page (Phase 5) */}
+            <Route path="calendar" element={<CalendarPage />} />
+
+            {/* Daily Review Page (Phase 5) */}
+            <Route path="review" element={<DailyReviewPage />} />
 
             {/* Navigation Routes with Clean Branded Placeholders */}
             <Route
@@ -34,20 +39,8 @@ export default function App() {
                 <PlaceholderPage
                   title="My Daily Tasks"
                   icon={CheckSquare}
-                  phase="Phase 5"
+                  phase="Phase 6"
                   description="Comprehensive task checklist management, priority sorting, filtering, and CRUD operations."
-                />
-              }
-            />
-
-            <Route
-              path="calendar"
-              element={
-                <PlaceholderPage
-                  title="Calendar & Timeline"
-                  icon={Calendar}
-                  phase="Phase 5"
-                  description="Interactive calendar view to visualize daily deadlines, scheduled hours, and milestone planning."
                 />
               }
             />
@@ -58,20 +51,8 @@ export default function App() {
                 <PlaceholderPage
                   title="Task History"
                   icon={History}
-                  phase="Phase 5"
+                  phase="Phase 6"
                   description="Audit log and searchable archive of completed milestones, historical performance, and previous days."
-                />
-              }
-            />
-
-            <Route
-              path="review"
-              element={
-                <PlaceholderPage
-                  title="Daily Review"
-                  icon={ClipboardCheck}
-                  phase="Phase 5"
-                  description="End-of-day evaluation scorecard, reflection journaling, and carry-forward decision workflows."
                 />
               }
             />
@@ -94,7 +75,7 @@ export default function App() {
                 <PlaceholderPage
                   title="Analytics & Insights"
                   icon={BarChart3}
-                  phase="Phase 5"
+                  phase="Phase 6"
                   description="Productivity velocity metrics, completion breakdown charts, streak tracking, and focus trends."
                 />
               }
