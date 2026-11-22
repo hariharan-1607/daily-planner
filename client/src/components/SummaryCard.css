@@ -1,0 +1,104 @@
+/* SummaryCard Styling */
+.summary-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xs);
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.summary-card:hover {
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-2px);
+}
+
+.summary-card-inner {
+  padding: 1.25rem 1.25rem 1.1rem 1.25rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.summary-card-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.summary-card-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.35rem;
+}
+
+.summary-card-value {
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.summary-card-subtext {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+.summary-icon-wrapper {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.summary-accent-bar {
+  height: 3px;
+  width: 100%;
+}
+
+/* Variant Styles */
+.summary-icon-total {
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary-border);
+}
+.summary-bar-total {
+  background-color: var(--color-primary);
+}
+
+.summary-icon-completed {
+  background-color: var(--color-success-light);
+  color: var(--color-success);
+  border: 1px solid var(--color-success-border);
+}
+.summary-bar-completed {
+  background-color: var(--color-success);
+}
+
+.summary-icon-partial {
+  background-color: var(--color-warning-light);
+  color: var(--color-warning);
+  border: 1px solid var(--color-warning-border);
+}
+.summary-bar-partial {
+  background-color: var(--color-warning);
+}
+
+.summary-icon-pending {
+  background-color: var(--color-pending-light);
+  color: var(--color-pending);
+  border: 1px solid var(--color-pending-border);
+}
+.summary-bar-pending {
+  background-color: var(--color-pending);
+}

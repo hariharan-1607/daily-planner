@@ -1,0 +1,14 @@
+/* PartialWorkModal Styles */
+.partial-work-modal {
+  max-width: 480px;
+}
+
+.btn-warning-action {
+  background-color: var(--color-warning);
+  color: #ffffff;
+  border: 1px solid transparent;
+}
+
+.btn-warning-action:hover {
+  background-color: #d97706;
+}

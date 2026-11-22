@@ -1,0 +1,133 @@
+/* BulkTaskModal Styles */
+.bulk-modal-card {
+  max-width: 640px;
+}
+
+.bulk-textarea {
+  min-height: 110px;
+  font-family: inherit;
+  line-height: 1.5;
+}
+
+.form-hint {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  margin-top: 0.25rem;
+}
+
+.form-hint code {
+  background-color: var(--color-surface-secondary);
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+  border: 1px solid var(--color-border);
+  color: var(--color-primary);
+}
+
+.form-row-3 {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.extracted-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: var(--color-surface-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 0.875rem 1rem;
+}
+
+.extracted-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.25rem;
+}
+
+.extracted-title {
+  font-size: 0.825rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.extracted-count-badge {
+  font-size: 0.725rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  background-color: var(--color-primary-light);
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-primary-border);
+}
+
+.extracted-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  max-height: 180px;
+  overflow-y: auto;
+  padding-right: 0.25rem;
+}
+
+.extracted-item-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 0.35rem 0.6rem;
+}
+
+.item-number {
+  font-size: 0.775rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  width: 20px;
+}
+
+.extracted-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 0.85rem;
+  color: var(--color-text-main);
+  padding: 0.2rem 0;
+}
+
+.extracted-input:focus {
+  outline: none;
+}
+
+.item-delete-btn {
+  color: var(--color-text-muted);
+  padding: 0.25rem;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.item-delete-btn:hover {
+  color: var(--color-danger);
+  background-color: var(--color-danger-light);
+}
+
+.extracted-empty {
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.825rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+@media (max-width: 640px) {
+  .form-row-3 {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+}
